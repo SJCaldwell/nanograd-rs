@@ -99,8 +99,8 @@ impl fmt::Display for Value {
         let value_borrow = self.0.borrow();
         write!(
             f,
-            "Value(data={}, op={:?})",
-            value_borrow.data, value_borrow.op
+            "Value(data={}, grad={}, op={:?})",
+            value_borrow.data, value_borrow.grad, value_borrow.op
         )
     }
 }
